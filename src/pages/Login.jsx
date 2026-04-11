@@ -3,7 +3,7 @@ import { useNavigate, Link } from "react-router-dom";
 import API from "../api/axios";
 import Toast, { toast } from "../components/Toast";
 import { setAuth } from "../utils/auth";
-import '../Style/login.css'
+import '../Style/Login.css'
 
 export default function Login() {
   const [email, setEmail]       = useState("");
