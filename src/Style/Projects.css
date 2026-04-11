@@ -1,0 +1,171 @@
+.page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 28px;
+}
+
+.page-title { font-family: var(--head); font-size: 24px; font-weight: 700; }
+.page-sub   { color: var(--muted); font-size: 12px; margin-top: 4px; }
+
+.btn-add {
+  display: flex; align-items: center; gap: 8px;
+  padding: 11px 20px;
+  background: linear-gradient(135deg, var(--accent), #9b8dff);
+  border: none; border-radius: var(--r);
+  color: #fff; font-family: var(--head);
+  font-size: 13px; font-weight: 600;
+  cursor: pointer; transition: opacity .2s;
+}
+.btn-add:hover { opacity: .88; }
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 16px;
+}
+
+.card {
+  background: var(--s1);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 22px;
+  transition: border-color .2s, transform .2s;
+  position: relative; overflow: hidden;
+}
+
+.card:hover { border-color: var(--accent); transform: translateY(-2px); }
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; height: 2px;
+  background: linear-gradient(90deg, var(--accent), var(--a2));
+  opacity: 0; transition: opacity .2s;
+}
+.card:hover::before { opacity: 1; }
+
+.card-img {
+  width: 100%; height: 140px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 14px;
+}
+
+.card-img-placeholder {
+  width: 100%; height: 140px;
+  border-radius: 8px; margin-bottom: 14px;
+  background: var(--s2);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--muted); font-size: 12px;
+}
+
+.card-title {
+  font-family: var(--head);
+  font-size: 16px; font-weight: 600;
+  margin-bottom: 8px;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+
+.card-desc {
+  color: var(--muted); font-size: 12px; line-height: 1.6;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.card-tag {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 11px;
+  background: rgba(124,109,250,.15);
+  color: var(--accent);
+  border: 1px solid rgba(124,109,250,.25);
+}
+
+.card-actions {
+  display: flex; gap: 8px; margin-top: 16px;
+}
+
+.btn-edit {
+  flex: 1; padding: 9px;
+  background: rgba(124,109,250,.1);
+  border: 1px solid rgba(124,109,250,.3);
+  border-radius: 8px; color: var(--accent);
+  font-size: 12px; cursor: pointer; font-family: var(--font);
+  transition: background .15s;
+}
+.btn-edit:hover { background: rgba(124,109,250,.2); }
+
+.btn-del {
+  padding: 9px 14px;
+  background: rgba(255,68,85,.1);
+  border: 1px solid rgba(255,68,85,.3);
+  border-radius: 8px; color: var(--danger);
+  font-size: 12px; cursor: pointer; font-family: var(--font);
+  transition: background .15s;
+}
+.btn-del:hover { background: rgba(255,68,85,.2); }
+
+.loading-wrap { text-align: center; padding: 60px; }
+
+.empty { text-align: center; padding: 60px 20px; color: var(--muted); }
+.empty-icon { font-size: 40px; margin-bottom: 12px; }
+.empty-text { font-size: 14px; }
+
+
+
+/* ── FILE UPLOAD ── */
+.file-upload-label {
+  display: block;
+  cursor: pointer;
+  margin-top: 8px;
+}
+
+.file-upload-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 16px;
+  background: var(--s2);
+  border: 1px dashed var(--border);
+  border-radius: var(--r);
+  color: var(--muted);
+  font-size: 13px;
+  font-family: var(--font);
+  transition: border-color .2s, color .2s;
+  width: 100%;
+  justify-content: center;
+}
+
+.file-upload-label:hover .file-upload-btn {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+/* ── IMAGE PREVIEWS ── */
+.img-preview-row {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.img-preview-thumb {
+  width: 80px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+}
+
+/* ── CARD SUBTITLE ── */
+.card-subtitle {
+  color: var(--accent);
+  font-size: 12px;
+  margin-bottom: 6px;
+  font-family: var(--head);
+}

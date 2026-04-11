@@ -1,0 +1,12 @@
+.service-icon {
+  font-size: 36px;
+  margin-bottom: 14px;
+}
+
+.service-price {
+  margin-top: 10px;
+  color: var(--a3);
+  font-size: 14px;
+  font-weight: 500;
+  font-family: var(--head);
+}

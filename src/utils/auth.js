@@ -1,0 +1,17 @@
+import Cookies from "js-cookie";
+
+const TOKEN_KEY = "sf_token";
+
+export const setAuth = (token) => {
+  Cookies.set(TOKEN_KEY, token, {
+    expires: 7,        // 7 days
+    secure: false,     // set true in production (HTTPS)
+    sameSite: "Lax",
+  });
+};
+
+export const getToken = () => Cookies.get(TOKEN_KEY);
+
+export const clearAuth = () => Cookies.remove(TOKEN_KEY);
+
+export const isAuthenticated = () => !!Cookies.get(TOKEN_KEY);
